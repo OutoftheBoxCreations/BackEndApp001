@@ -39,6 +39,12 @@
     <Compile Include="schema\schema001.js">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="schema\scotch\authors.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="schema\scotch\posts.js">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="TNB\TNB002.js" />
     <Compile Include="TNB\TNB002Obj1.js" />
     <Compile Include="TNB\TNB002Obj2.js" />
@@ -51,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="graphql\" />
+    <Folder Include="schema\scotch\" />
     <Folder Include="TNB\" />
     <Folder Include="schema\" />
     <Folder Include="public\" />
