@@ -30,8 +30,18 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.js" />
+    <Compile Include="gamify.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="graphql\gamify.js" />
     <Compile Include="routes\index.js" />
     <Compile Include="routes\users.js" />
+    <Compile Include="schema\schema001.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TNB\TNB002.js" />
+    <Compile Include="TNB\TNB002Obj1.js" />
+    <Compile Include="TNB\TNB002Obj2.js" />
     <Content Include="package.json" />
     <Content Include="public\stylesheets\main.css" />
     <Content Include="README.md" />
@@ -40,6 +50,9 @@
     <Content Include="views\error.pug" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="graphql\" />
+    <Folder Include="TNB\" />
+    <Folder Include="schema\" />
     <Folder Include="public\" />
     <Folder Include="public\images\" />
     <Folder Include="public\javascripts\" />
