@@ -53,7 +53,7 @@ const BlogQueryRootType = new GraphQLObjectType({
             type: new GraphQLList(AuthorType), //GraphQLList creates a type wrapper around other types that represents a list of those types.
             description: "List of all Authors",
             resolve: function () {
-                return Authors
+                return Authors  //The function of resolve is perform operations that involve data manipulation or transformation with a value returned at the end of the operation.
             }
         },
         posts: {

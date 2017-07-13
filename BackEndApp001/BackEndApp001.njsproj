@@ -34,6 +34,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="graphql\gamify.js" />
+    <Compile Include="graphql\graphing.js" />
     <Compile Include="routes\index.js" />
     <Compile Include="routes\users.js" />
     <Compile Include="schema\schema001.js">
