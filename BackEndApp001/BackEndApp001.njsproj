@@ -37,6 +37,18 @@
     <Compile Include="graphql\graphing.js" />
     <Compile Include="routes\index.js" />
     <Compile Include="routes\users.js" />
+    <Compile Include="schema\festive\donation_drives.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="schema\festive\org_user.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="schema\festive\indi_user.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="schema\festive_schema_v0_001.js">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="schema\schema001.js">
       <SubType>Code</SubType>
     </Compile>
@@ -58,6 +70,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="graphql\" />
+    <Folder Include="schema\festive\" />
     <Folder Include="schema\scotch\" />
     <Folder Include="TNB\" />
     <Folder Include="schema\" />

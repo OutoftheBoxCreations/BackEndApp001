@@ -1,29 +1,29 @@
-﻿const _ = require('lodash');
-
-const Authors = require('./sotch/authors'); // This is to make available authors.json file
-const Posts = require('./scotch/posts'); // This is to make available post.json file
-
-/* Here a simple schema is constructed without using the GraphQL query language. 
-  e.g. using 'new GraphQLObjectType' to create an object type 
-*/
-
-let {
-  // These are the basic GraphQL types need in this tutorial
-  GraphQLString,
-  GraphQLList,
-  GraphQLObjectType,
-  GraphQLNonNull,  // This is used to create required fileds and arguments
-  GraphQLSchema,  // This is the class we need to create the schema
+﻿let {
+    // These are the basic GraphQL types need in this tutorial
+    GraphQLString,
+    GraphQLList,
+    GraphQLObjectType,
+    GraphQLNonNull,  // This is used to create required fileds and arguments
+    GraphQLSchema,  // This is the class we need to create the schema
 
 } = require('graphql');
 
-const AuthorType = new GraphQLObjectType({
-    name: "Author",
-    description: "This represents an Author",
+const Organization_Type = new GraphQLObjectType({
+    name: "Organization",
+    description: "This represents an Organization",
     fields: () => ({
         id: { type: new GraphQLNonNull(GraphQLString) },
         name: { type: new GraphQLNonNull(GraphQLString) },
         twitterHandle: { type: GraphQLString }
+    })
+});
+
+const OrganizationRole_Type = new GraphQLObjectType({
+    name: "Organizational Role",
+    description: "This represents a Role within the Organization",
+    fields: () => ({
+        role_name: { type: new GraphQLNonNull(GraphQLString) },
+        role_of: { type: new GraphQLNonNull(GraphQLString) }
     })
 });
 
