@@ -1,48 +1,50 @@
-﻿const Organizations =  = new GraphQLObjectType({
+﻿var Drive = require("./don_drive");
+
+const Organization = new GraphQLObjectType({
+    org_id: int,
     name: string,
-    'registration_status': string, //(Registered, Unregistered, In-Process)
-    'registration_Number': string,
+    registration_status: string, //(Registered, Unregistered, In-Process)
+    registration_Number: string,
     centres = {
-        number: int, //(0=online, 1 - n = #centres)
+        number: int, //(0=online, 1 -> n = #centres)
         name: string,
         type: string, //(headquarter, office, co-working, hotspot, information-centre,)
-        'location': {
+        location: {
             line1: string,
             line2: string, //(Optional)
-            "street-addres": string,
+            street_addres: string,
             locality: string,
             landmark: string,
             city: string,
             state: string, //(Auto-Suggest)
-            "zip-code": string, //(Auto-Detect)
-            country: string,
-            "languages-supported": string,
-            "time-zone": string, //(Auto-Detect)
-        },
-
+            zip_code : string, //(Auto-Detect)
+            country : string,
+            languages_supported: string,
+            time_zone: string, //(Auto-Detect)
+        }
     },
     personell = {
-        "role-type": "Founder",
+        role_type: "Founder",
         status: "Active", //(Active, Inactive, Retired, Deceased)
         name: "",
         age: "",
         gender: "",
-        "mobile-number": "+##-#####-#####",
-        "email-id": "abc@xyz.com",
-        "id-proofs": { //(Aadhar, Passport, PAN, VoterID, Ration Card)
+        mobile_number: "+##-#####-#####",
+        email_id: "abc@xyz.com",
+        id_proofs: { //(Aadhar, Passport, PAN, VoterID, Ration Card)
             number: 1,
             type: "Aadhar",
             id: "",
             expiry: ""
         },
-        "social-handles": { //(FB, LinkedIn, Twitter, Blogspot)
+        social_handles: { //(FB, LinkedIn, Twitter, Blogspot, Portfolio)
             number: 1,
             platform: "Facebook",
             link: "",
             loggedin: "yes"
         },
     },
-    "social-media-handles": { //(FB, LinkedIn, Twitter, Blogspot)
+    social_media_handles: { //(FB, LinkedIn, Twitter, Blogspot, Website)
         number: 1,
         platform: "Facebook",
         link: "",
@@ -52,11 +54,15 @@
     history: {
         total_drives: 1,
         active_drives: 1,
-        rating: 8.7,
+        points: 87,
+        rating: points / total_drives,
         drives: {
-
+            type: Drive,
+            resolve: function (post) {
+                return _.find(Drives, a => a.id == post.drive_id);
+            }
         }
     }
 });
 
-module.exports = Organizations;
+module.exports = Organization;
