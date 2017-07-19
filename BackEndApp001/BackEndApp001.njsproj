@@ -46,6 +46,15 @@
     <Compile Include="schema\festive\indi_user.js">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="schema\festive\test-data\don.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="schema\festive\test-data\indi.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="schema\festive\test-data\org.js">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="schema\festive_schema_v0_001.js">
       <SubType>Code</SubType>
     </Compile>
@@ -71,6 +80,7 @@
   <ItemGroup>
     <Folder Include="graphql\" />
     <Folder Include="schema\festive\" />
+    <Folder Include="schema\festive\test-data\" />
     <Folder Include="schema\scotch\" />
     <Folder Include="TNB\" />
     <Folder Include="schema\" />
