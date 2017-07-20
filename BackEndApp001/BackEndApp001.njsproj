@@ -46,6 +46,9 @@
     <Compile Include="schema\festive\indi_user.js">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="schema\festive\p2d_ticket.js">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="schema\festive\test-data\don.js">
       <SubType>Code</SubType>
     </Compile>
@@ -58,7 +61,7 @@
     <Compile Include="schema\festive_schema_v0_001.js">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="schema\schema001.js">
+    <Compile Include="schema\scotch_schema_001.js">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="schema\scotch\authors.js">
