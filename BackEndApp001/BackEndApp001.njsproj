@@ -35,27 +35,41 @@
     </Compile>
     <Compile Include="graphql\gamify.js" />
     <Compile Include="graphql\graphing.js" />
+    <Compile Include="netguru\models\Ng_GQL_levelSkill.js" />
+    <Compile Include="netguru\models\Ng_GQL_skill.js" />
+    <Compile Include="netguru\models\Ng_GQL_user.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="netguru\Ng_GQL_4.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="netguru\Ng_GQL_Schema.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="netguru\Ng_GQL_Index.js">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="routes\index.js" />
     <Compile Include="routes\users.js" />
-    <Compile Include="schema\festive\don_drive.js">
+    <Compile Include="festive\schema\don_drive.js">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="schema\festive\org_user.js">
+    <Compile Include="festive\schema\org_user.js">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="schema\festive\indi_user.js">
+    <Compile Include="festive\schema\indi_user.js">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="schema\festive\p2d_ticket.js">
+    <Compile Include="festive\schema\p2d_ticket.js">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="schema\festive\test-data\don.js">
+    <Compile Include="festive\test-data\don.js">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="schema\festive\test-data\indi.js">
+    <Compile Include="festive\test-data\indi.js">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="schema\festive\test-data\org.js">
+    <Compile Include="festive\test-data\org.js">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="schema\festive_schema_v0_001.js">
@@ -76,7 +90,7 @@
     <Compile Include="scotch.io\scotch_002_server.js">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="TNB\TNB002.js" />
+    <Compile Include="TNB\TNB_002.js" />
     <Compile Include="TNB\TNB002Obj1.js" />
     <Compile Include="TNB\TNB002Obj2.js" />
     <Compile Include="TNB\TNB_001.js">
@@ -90,10 +104,13 @@
     <Content Include="views\error.pug" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="festive\schema\" />
     <Folder Include="graphql\" />
+    <Folder Include="netguru\" />
+    <Folder Include="netguru\models\" />
     <Folder Include="scotch.io\" />
-    <Folder Include="schema\festive\" />
-    <Folder Include="schema\festive\test-data\" />
+    <Folder Include="festive\" />
+    <Folder Include="festive\test-data\" />
     <Folder Include="scotch.io\schema\" />
     <Folder Include="scotch.io\schema\scotch\" />
     <Folder Include="TNB\" />
