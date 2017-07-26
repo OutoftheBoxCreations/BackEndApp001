@@ -2,7 +2,7 @@
     id: int,
     title: "",
     donation_category: "", //(Clothes, Books, Stationery, Food, Blood, Water, Sanitary Products, Medicine)
-    beneficieries: {
+    beneficiaries: {
         afflicted_by: "",
         located_at: ""
     },

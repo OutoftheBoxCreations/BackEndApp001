@@ -70,38 +70,40 @@
 //Adi.heals(Intern_1);
 //console.log("The Game Ends!\n Final Scores are:-" + "\n 1." + Adi + "\n 2." + Abhi + "\n 3." + Intern_1);
 
+
+////Scotch.io tutorial (https://scotch.io/@codediger/build-a-simple-graphql-api-server-with-express-and-nodejs)
 // example.js
-const express = require('express');
-const { buildSchema } = require('graphql');
-const graphqlHTTP = require('express-graphql');
-let port = 3000;
+//const express = require('express');
+//const { buildSchema } = require('graphql');
+//const graphqlHTTP = require('express-graphql');
+//let port = 3000;
 
 /* Here a simple schema is constructed using the GraphQL schema language (buildSchema). 
    More information can be found in the GraphQL spec release */
 
-let schema = buildSchema(`
-  type Query {
-    postTitle: String,
-    blogTitle: String
-  }
-`);
+//let schema = buildSchema(`
+//  type Query {
+//    postTitle: String,
+//    blogTitle: String
+//  }
+//`);
 
-// Root provides a resolver function for each API endpoint
-let root = {
-    postTitle: () => {
-        return 'Build a Simple GraphQL Server With Express and NodeJS';
-    },
-    blogTitle: () => {
-        return 'thewayidoit';
-    }
-};
+//// Root provides a resolver function for each API endpoint
+//let root = {
+//    postTitle: () => {
+//        return 'Build a Simple GraphQL Server With Express and NodeJS';
+//    },
+//    blogTitle: () => {
+//        return 'thewayidoit';
+//    }
+//};
 
-const app = express();
-app.use('/', graphqlHTTP({
-    schema: schema,
-    rootValue: root,
-    graphiql: true //Set to false if you don't want graphiql enabled
-}));
+//const app = express();
+//app.use('/', graphqlHTTP({
+//    schema: schema,
+//    rootValue: root,
+//    graphiql: true //Set to false if you don't want graphiql enabled
+//}));
 
-app.listen(port);
-console.log('GraphQL API server running at localhost:' + port);
+//app.listen(port);
+//console.log('GraphQL API server running at localhost:' + port);Scotch.io

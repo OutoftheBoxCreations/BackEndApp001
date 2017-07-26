@@ -13,7 +13,7 @@ let {
   GraphQLList,
   GraphQLObjectType,
   GraphQLNonNull,  // This is used to create required fileds and arguments
-  GraphQLSchema,  // This is the class we need to create the schema
+  GraphQLSchema,  // This is the class we need to create the schema 
 
 } = require('graphql');
 
