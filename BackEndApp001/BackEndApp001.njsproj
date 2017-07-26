@@ -12,7 +12,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>bd1ac60e-e6b5-488f-9f38-91dffe197b18</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>scotch.io\server.js</StartupFile>
+    <StartupFile>scotch.io\scotch_002_server.js</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -61,21 +61,27 @@
     <Compile Include="schema\festive_schema_v0_001.js">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="schema\scotch_schema_001.js">
+    <Compile Include="scotch.io\schema\scotch_schema_001.js">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="schema\scotch\authors.js">
+    <Compile Include="scotch.io\schema\scotch\authors.js">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="schema\scotch\posts.js">
+    <Compile Include="scotch.io\schema\scotch\posts.js">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="scotch.io\server.js">
+    <Compile Include="scotch.io\scotch_001.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="scotch.io\scotch_002_server.js">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="TNB\TNB002.js" />
     <Compile Include="TNB\TNB002Obj1.js" />
     <Compile Include="TNB\TNB002Obj2.js" />
+    <Compile Include="TNB\TNB_001.js">
+      <SubType>Code</SubType>
+    </Compile>
     <Content Include="package.json" />
     <Content Include="public\stylesheets\main.css" />
     <Content Include="README.md" />
@@ -88,7 +94,8 @@
     <Folder Include="scotch.io\" />
     <Folder Include="schema\festive\" />
     <Folder Include="schema\festive\test-data\" />
-    <Folder Include="schema\scotch\" />
+    <Folder Include="scotch.io\schema\" />
+    <Folder Include="scotch.io\schema\scotch\" />
     <Folder Include="TNB\" />
     <Folder Include="schema\" />
     <Folder Include="public\" />

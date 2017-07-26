@@ -7,7 +7,7 @@
 
 const express = require('express');
 const graphqlHTTP = require('express-graphql');
-const schema = require('../schema/scotch_schema_001');
+const schema = require('./schema/scotch_schema_001');
 
 let port = 3000;
 const app = express();

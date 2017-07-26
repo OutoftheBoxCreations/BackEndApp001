@@ -1,6 +1,6 @@
 ﻿const _ = require('lodash');
 
-const Authors = require('./sotch/authors'); // This is to make available authors.json file
+const Authors = require('./scotch/authors'); // This is to make available authors.json file
 const Posts = require('./scotch/posts'); // This is to make available post.json file
 
 /* Here a simple schema is constructed without using the GraphQL query language. 
@@ -8,18 +8,19 @@ const Posts = require('./scotch/posts'); // This is to make available post.json 
 */
 
 let {
-  // These are the basic GraphQL types need in this tutorial
-  GraphQLString,
-  GraphQLList,
-  GraphQLObjectType,
-  GraphQLNonNull,  // This is used to create required fileds and arguments
-  GraphQLSchema,  // This is the class we need to create the schema 
-
+    // These are the basic GraphQL types need in this tutorial
+    GraphQLString,
+    GraphQLList,
+    GraphQLObjectType,
+    // This is used to create required fileds and arguments
+    GraphQLNonNull,
+    // This is the class we need to create the schema
+    GraphQLSchema,
 } = require('graphql');
 
 const AuthorType = new GraphQLObjectType({
     name: "Author",
-    description: "This represents an Author",
+    description: "This represent an author",
     fields: () => ({
         id: { type: new GraphQLNonNull(GraphQLString) },
         name: { type: new GraphQLNonNull(GraphQLString) },
@@ -29,7 +30,7 @@ const AuthorType = new GraphQLObjectType({
 
 const PostType = new GraphQLObjectType({
     name: "Post",
-    description: "This represents a Post",
+    description: "This represent a Post",
     fields: () => ({
         id: { type: new GraphQLNonNull(GraphQLString) },
         title: { type: new GraphQLNonNull(GraphQLString) },
@@ -46,16 +47,13 @@ const PostType = new GraphQLObjectType({
 // This is the Root Query
 const BlogQueryRootType = new GraphQLObjectType({
     name: 'BlogAppSchema',
-    description: "Blog Application Schema Query Root",
+    description: "Blog Application Schema Root",
     fields: () => ({
         authors: {
             type: new GraphQLList(AuthorType),
-            //GraphQLList creates a type wrapper around other types that represents a list of those types.
             description: "List of all Authors",
             resolve: function () {
                 return Authors
-                //The function of 'resolve' is perform operations that involve data manipulation or transformation 
-                //with a value returned at the end of the operation.
             }
         },
         posts: {
